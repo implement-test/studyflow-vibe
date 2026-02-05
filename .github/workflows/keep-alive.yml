@@ -1,0 +1,16 @@
+name: Supabase Keep Alive
+
+on:
+  schedule:
+    # 3일마다 한 번씩 실행 (UTC 기준 00:00)
+    - cron: '0 0 */3 * *'
+  workflow_dispatch: # 수동 실행 가능
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase API
+        run: |
+          # 여기에 배포된 사이트 주소를 넣으시면 됩니다.
+          curl -I https://your-app-domain.vercel.app/api/keep-alive
