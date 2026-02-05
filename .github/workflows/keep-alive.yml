@@ -13,4 +13,4 @@ jobs:
       - name: Ping Supabase API
         run: |
           # 여기에 배포된 사이트 주소를 넣으시면 됩니다.
-          curl -I https://your-app-domain.vercel.app/api/keep-alive
+          curl -I https://studyflow-vibe.vercel.app/api/keep-alive
